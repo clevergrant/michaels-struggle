@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Michael's Struggle - A Tale from Astrothos</title>
+	<meta name="description" content="A story of exile, growth, and redemption set in the living city of Astrothos.">
+	<meta name="author" content="From the Astrothos Chronicles">
+
+	<style>
+		/* CSS Reset and Base Styles */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* Dark Mode Color Palette */
+		:root {
+			--bg-primary: #0d1117;
+			--bg-secondary: #161b22;
+			--bg-tertiary: #21262d;
+			--text-primary: #f0f6fc;
+			--text-secondary: #7d8590;
+			--text-accent: #58a6ff;
+			--border-color: #30363d;
+			--highlight-bg: #1c2128;
+			--chapter-accent: #ffa657;
+			--link-color: #79c0ff;
+			--link-hover: #a5a5ff;
+		}
+
+		/* Typography */
+		body {
+			font-family: 'Georgia', 'Times New Roman', serif;
+			line-height: 1.7;
+			color: var(--text-primary);
+			background-color: var(--bg-primary);
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Container */
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 40px 20px;
+			min-height: 100vh;
+		}
+
+		/* Header */
+		.header {
+			text-align: center;
+			margin-bottom: 60px;
+			padding-bottom: 30px;
+			border-bottom: 2px solid var(--border-color);
+		}
+
+		.title {
+			font-size: 3.5rem;
+			font-weight: bold;
+			color: var(--text-accent);
+			margin-bottom: 15px;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			letter-spacing: -0.02em;
+		}
+
+		.subtitle {
+			font-size: 1.3rem;
+			color: var(--text-secondary);
+			font-style: italic;
+			margin-bottom: 30px;
+		}
+
+		/* Table of Contents */
+		.toc {
+			background: var(--bg-secondary);
+			border: 1px solid var(--border-color);
+			border-radius: 8px;
+			padding: 25px;
+			margin-bottom: 50px;
+		}
+
+		.toc h3 {
+			color: var(--chapter-accent);
+			margin-bottom: 15px;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.toc ul {
+			list-style: none;
+		}
+
+		.toc li {
+			margin-bottom: 8px;
+		}
+
+		.toc a {
+			color: var(--link-color);
+			text-decoration: none;
+			transition: color 0.3s ease;
+			padding: 5px 0;
+			display: block;
+		}
+
+		.toc a:hover {
+			color: var(--link-hover);
+			text-decoration: underline;
+		}
+
+		/* Main Content */
+		.content {
+			line-height: 1.8;
+		}
+
+		/* Chapter Headings */
+		h1 {
+			font-size: 2.8rem;
+			color: var(--text-accent);
+			margin: 60px 0 30px 0;
+			text-align: center;
+			font-weight: 600;
+			letter-spacing: -0.01em;
+		}
+
+		h2 {
+			font-size: 1.8rem;
+			color: var(--chapter-accent);
+			margin: 50px 0 25px 0;
+			padding: 15px 0;
+			border-bottom: 1px solid var(--border-color);
+			font-weight: 500;
+		}
+
+		h2::before {
+			content: "§ ";
+			color: var(--text-secondary);
+			font-weight: 300;
+		}
+
+		/* Paragraphs */
+		p {
+			margin-bottom: 24px;
+			text-align: justify;
+			hyphens: auto;
+		}
+
+		/* First paragraph of each chapter */
+		h2+p::first-letter {
+			float: left;
+			font-size: 4em;
+			line-height: 0.8;
+			margin: 0.1em 0.1em 0 0;
+			color: var(--chapter-accent);
+			font-weight: bold;
+		}
+
+		/* Emphasis and Quotes */
+		em {
+			color: var(--text-accent);
+			font-style: italic;
+		}
+
+		strong {
+			color: var(--chapter-accent);
+			font-weight: 600;
+		}
+
+		/* Foreign text styling */
+		.foreign {
+			font-style: italic;
+			color: var(--text-accent);
+		}
+
+		/* Footer */
+		.footer {
+			margin-top: 80px;
+			padding-top: 30px;
+			border-top: 1px solid var(--border-color);
+			text-align: center;
+			color: var(--text-secondary);
+			font-size: 0.9rem;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			.container {
+				padding: 20px 15px;
+			}
+
+			.title {
+				font-size: 2.5rem;
+			}
+
+			h1 {
+				font-size: 2.2rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			body {
+				font-size: 16px;
+			}
+
+			h2+p::first-letter {
+				font-size: 3em;
+			}
+		}
+
+		/* Print Styles */
+		@media print {
+			body {
+				background: white;
+				color: black;
+			}
+
+			.toc {
+				background: #f5f5f5;
+				border: 1px solid #ccc;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<h1 class="title">Michael's Struggle</h1>
+			<p class="subtitle">A Tale from the Chronicles of Astrothos</p>
+		</header>
+
+		<nav class="toc">
+			<h3>Contents</h3>
+			<ul>
+				<li><a href="#chapter-1">Chapter 1 — Nǐ yǒu cōngmíng-an menson</a></li>
+				<li><a href="#chapter-2">Chapter 2 — The Color I Couldn't Hold</a></li>
+				<li><a href="#chapter-3">Chapter 3 — The Night of the Ghost's Warning</a></li>
+				<li><a href="#chapter-4">Chapter 4 — Dawnreef</a></li>
+				<li><a href="#chapter-5">Chapter 5 — The Heel</a></li>
+				<li><a href="#chapter-6">Chapter 6 — The Night Without the Ghost</a></li>
+				<li><a href="#chapter-7">Chapter 7 — The Leaving That Wasn't</a></li>
+				<li><a href="#chapter-8">Chapter 8 — The Road Back</a></li>
+			</ul>
+		</nav>
+
+		<main class="content">
+			<h2 id="chapter-1">Chapter 1 — <span class="foreign">Nǐ yǒu cōngmíng-an menson</span></h2>
+			<p>My name is Michael. Growing up, my father — an Auditeur with the quiet patience of someone who had listened to
+				machines and people his whole life — would often remind me, <span class="foreign">"Nǐ yǒu cōngmíng-an
+					menson"</span> — you have a sharp mind.</p>
+
+			<p>Most of my life I believed him. Right now, I'm not so sure.</p>
+
+			<p>When I think of my early years in Astrothos, I hear the city before I see it: the soft respiration of the Ghost
+				drifting through the viaducts at dawn, the low harmonic thrum of roots adjusting deep below. Buildings yawned
+				awake in shimmering gradients of gold and green, their chromatophores opening to greet the suns. I wasn't the
+				best in school — my mind wandered to anything in motion — but I had friends, and I carried the kind of
+				unblemished confidence you only have when you've never been asked to prove it.</p>
+
+			<p>I dreamed of Air Skating and almost nothing else. The idea of another life — a trade, a craft, a quiet post in
+				the archives — seemed distant and absurd. I built my first pair of skates on my thirteenth orbit. That was late
+				for a racer with serious ambitions; the great ones started years earlier, their legs and lungs molded to the
+				work. But at thirteen I could finally hold my focus long enough to learn. My only companion with the same fever
+				for racing was Jens.</p>
+
+			<p>Jens was a year older, already ahead in training and in the art of building his Genny — the generator core that
+				gives an Air Skate its lift and personality. I first saw him in one of the root workshops, crouched under the
+				dim violet glow of biolamps, tuning his turbine coils so precisely that even the Ghost lingered in slow spirals,
+				as if watching. His hair was pulled back, sleeves rolled to the elbow, forearms flecked with pale root dust.</p>
+
+			<p>Being who he was — always curious, always generous — he noticed me hovering near the threshold and waved me in
+				as though we'd been meeting there for years. He showed me how to shape the intake vanes, how to listen for the
+				whisper of a balanced spin, how to attune a Genny so it matched your gait, your weight, your will. I stayed
+				until the lamps dimmed, and by the time I left I was already planning mine.</p>
+
+			<p>From then on, I spent whole days down in those root workshops, surrounded by the scent of damp wood-flesh and
+				the distant heartbeat of the city. My Genny was nothing elegant at first — a patchwork of scavenged rotors,
+				recycled capacitors, and a casing I'd carved myself from a shed plate of biosteel — but it was mine. After only
+				a few days of trial runs, I watched Jens race. Two months later, I was at his side on the Humania circuit,
+				learning how the crowd judged not just speed but balance, artistry, and the flourishes that made the Ghost
+				ripple in approval.</p>
+
+			<p>As much as I admired him, there was something about Jens that unsettled me — a quality I could never seem to
+				copy. It wasn't his skill; in the past four years, I'd beaten him more often than not. It was the way he
+				inhabited himself. His confidence wasn't loud, but it was unshakable, and he carried it like an unspoken promise
+				to everyone he met.</p>
+
+			<p>He was always happy to see me — genuinely happy — and, as far as I could tell, he was happy to see anyone.
+				Perfectly capturing this strange, infuriating stability was the band around his wrist: a bright, royal-blue
+				quipu. The fiber strands shimmered with a depth of hue that never faltered, each thread braided in the tight,
+				precise pattern only its maker would know. In our culture, you learn not to compare colors — quipus are too
+				personal for that — but I couldn't help it. His was the calm note of a perfect echo. Mine… shifted restlessly, a
+				weather vane in a wind I didn't understand.</p>
+			<h2 id="chapter-2">Chapter 2 — The Color I Couldn't Hold</h2>
+			<p>My quipu was always a quiet weight on my wrist — not in grams, but in shame. Nobody ever said anything
+				outright, but Jens's quipu seemed cleaner, sharper, brighter than any I had ever seen. Mine never shone with
+				anything close to that kind of color. I'd taken to calling it a dud when no one was listening.</p>
+
+			<p>When I let that slip aloud, my family and a few friends would scold me, reminding me that the color didn't
+				matter — that each quipu was personal, a living thread bound to the person who made it. Still, I noticed
+				patterns in my own. My quipu seemed to shift through certain hues when I felt anxious or nervous; other tones
+				appeared when pride bloomed; still others in moments of ease.</p>
+
+			<p>Jens's quipu, though, was always the same steady, royal blue. Every race I skated against him — no matter the
+				stakes, no matter how badly I beat him — there it was, shining like a deep note that never wavered. It tormented
+				me, the way he could stay perfectly calm, even in the roar of the crowds during Humania, the Ghost curling
+				luminous around our ankles as we crossed the finish. And why did it have to be so bright? It was as if the city
+				itself wanted me to notice.</p>
+
+			<p>Over the years, I began weaving bracelets of my own — soft grass cords and dyed root fibers — to stack along my
+				wrist. It wasn't for style; it was to hide my shame, and the way I shrank beside him. He had the gift of
+				belonging everywhere, knowing everyone; I had Toby and Lehanna. They were older, steadier, their quipus more
+				like mine — restless, uneven, rarely settling into one color for long.</p>
+
+			<p>Toby and Lehanna weren't racers. They had a knack for the living systems of the city: pruning the groves,
+				coaxing crops from the greenhouse towers, tending the bioluminescent fungi that brightened the root tunnels.
+				While I was racing or shaving a fraction of weight from my skates, they were elbow-deep in damp bark-flesh,
+				their laughter echoing through corridors that smelled of leaf and loam.</p>
+
+			<p>I should explain: Astrothos, the city I call home, lies deep in the Great Dunes. It's alive — grown from the
+				Songseed, fed by the suns, cooled by the Ghost's breath. Every child born here receives a quipu before they can
+				even speak, braided in the ceremony that marks them as part of the whole. Much of what we once knew about them
+				was lost in the Annihilation, but the Auditeurs — our scientists — still study them, hoping to understand every
+				flicker of color, every pulse of light.</p>
+
+			<p>My father was an Auditeur, my mother a Canteur. Astrothos seems to like that pairing, perhaps to keep the two
+				from drifting too far into rivalry. Auditeurs chart and probe the city's workings, cataloging every new species
+				the city grows. Canteurs are the keepers of story and song — the ones who ensure that no one forgets where we
+				came from, and why. They carry the echoes of the past forward in Esperantese, woven into Oratia and Exhalia so
+				the city itself remembers.</p>
+
+			<p>Some Auditeurs think the Canteurs are sentimental idlers, too willing to accept mysteries instead of solving
+				them. Some Canteurs think the Auditeurs bury themselves in work that misses the heart of what matters. I've
+				heard both speak with their heads lost in the clouds.</p>
+
+			<p>I took after my father. That's probably why I was drawn to Air Skating, where one of the unspoken laws is that
+				you build your own skates. Toby and Lehanna were Auditeur-minded as well, happiest with their hands in the
+				living systems. Jens was a proud Canteur — his racing style was pure feel, a sort of dance with the track and
+				the Ghost. I think that's why I often had the edge on him; I would tune my Genny down to the micron, while he
+				trusted whatever shape it had grown into.</p>
+
+			<p>When the city began sending volunteers into the wilds — Emissaries to the Enclaves — Jens was among the first
+				to sign up. The idea of living far from the Ghost's familiar light seemed impossible to me; to him, it was an
+				invitation.</p>
+
+			<p>He invited me to his farewell gathering, a small thing in one of the high terraces where the Ghost drifts slow
+				and bright at dusk. I told him I couldn't go; Toby and Lehanna had already invited me to a party. I've wondered
+				more times than I can count how different my life might have been if I'd gone to Jens's farewell instead.</p>
+			<h2 id="chapter-3">Chapter 3 — The Night of the Ghost's Warning</h2>
+			<p>I'll remember the day of the party for as long as I live.</p>
+
+			<p>Toby and Lehanna spent most of their hours in the groves, harvesting the endless bounty that grew from
+				Astrothos's living walls and terraces. I loved visiting them there. The groves always felt different from the
+				rest of the city — quieter, though never silent. You could hear the slow respiration of leaf and root, the faint
+				pop and hiss as nutrient pods opened in the soil. They were always happy to see me, smiling through sweat and
+				leaf dust.</p>
+
+			<p>That morning, I'd gone for a skate before meeting them, just to watch the endochromatophores awaken. As the
+				suns crested the dunes, the pigments inside every building's skin shifted, catching the light to match weather
+				and power demand. Some turned glassy to flood their interiors with warmth, others drank in heat and darkened to
+				almost black. The air was filled with the first harmonic hums of the city — what the Canteurs call the Echo.
+				Every citizen has an echo of their own, a signature resonance. I'd learned mine well enough to hum along with
+				the city's, the two vibrations mingling until they felt like a single note. By that age, I knew the city's echo
+				better than my own heartbeat.</p>
+
+			<p>When I reached the groves, I expected to see Toby and Lehanna bent over the crops. Instead, only a handful of
+				workers moved between rows. Toby's father was among them and told me they had gone back to Lehanna's dwelling. I
+				turned to leave, but the Ghost caught my attention.</p>
+
+			<p>In low light, the Ghost manifests as a gauzy, glowing haze that seeps into every street and walkway. Each
+				droplet in that mist holds clusters of bioluminescent dinoflagellates, and when disturbed they bloom with light.
+				Skating through it at speed is like carving trails through liquid starlight; from a distance, you'd look like an
+				apparition haunting the city's arteries.</p>
+
+			<p>But the Ghost is more than spectacle. It feels present, aware — as if the city itself is breathing through it.
+				We called it the Ghost because it behaved like another citizen: it knew the streets, the needs of the day, and,
+				in ways that were never officially confirmed but always believed, it knew each of us.</p>
+
+			<p>As a child, I learned to trust it. Once, lost in the groves, I'd wandered between identical corridors of
+				foliage until the ground beneath my feet began to glow, marking a path back to my family. Another time, it had
+				led me — for reasons I didn't understand — straight to Jens, who had just finished building a new Genny for his
+				skates. That meeting had changed my life.</p>
+
+			<p>And now, it was calling again.</p>
+
+			<p>The mist thickened near the granary, where the outer wall was freckled with strange pockmarks. It seemed
+				obvious the Ghost wanted them repaired. I had a pouch of repair proteins with me — meant for patching
+				microfractures in my skates — and I smeared the warm gel into each cavity, watching as the living wall began to
+				knit itself closed. Before they'd sealed even a fraction, the Ghost thinned, drifting away — its way of saying
+				the work was done.</p>
+
+			<p>Lehanna's dwelling was clear across the city from the groves, a long walk through arterial walkways where
+				bio-veins glowed faintly beneath translucent walls. She liked the journey. Her grandfather had been the first to
+				chart the network of caves and tubes below Astrothos, and her parents — both Auditeurs — spent most of their
+				lives down there, trying to divine their purpose. Those of us who raced Air Skates used the tunnels as a kind of
+				forbidden circuit.</p>
+
+			<p>I had a hunch Toby and Lehanna hadn't gone home at all.</p>
+
+			<p>The entrances to the caves sit at the city's outer edge. I slipped into one, less familiar with this branch but
+				confident enough to navigate. The Ghost is thick down there, likely because the dinoflagellates reproduce in the
+				humid dark. The young ones can't control their luminescence; the result is a constant, silvery fog that lights
+				every surface.</p>
+
+			<p>I followed a brightening trail until the passage widened into a larger chamber. There they were — crouched over
+				something on the ground, intent and silent.</p>
+
+			<p>It was a cluster of mushrooms, their caps a deep, unnatural violet with a faint pulsing glow. Their posture and
+				the scattered tools around them made it clear these weren't a wild discovery. They'd been cultivating them in
+				secret. The pockmarks on the granary wall, I realized, had been from earlier tests. This cavern was their new
+				laboratory. I wondered how they expected to keep anything hidden from the Ghost but kept that thought to myself.
+			</p>
+
+			<p>From the way they gestured and traced the curve of each cap, it became clear what these mushrooms were meant to
+				do: they could alter a person's state of mind.</p>
+
+			<p>Curiosity won. I took one.</p>
+
+			<p>The taste was earthy and metallic, clinging to my tongue. The thick fog of the Ghost swirled tighter, its
+				brightness sharpening until it fractured into impossible geometries — ribbons of light folding in on themselves,
+				tunnels spiraling into colors I had no name for. Shapes shifted at the edge of perception, collapsing into
+				others before I could fix them in memory. The air felt alive, pressing in close.</p>
+
+			<p>Then, nothing.</p>
+
+			<p>When I woke, I was lying on a sun-warmed street, my mouth tasting of copper and ash. People stood in a wide
+				ring around me, their expressions pulled tight — not in fear, but in the raw alertness that comes after chaos.
+				Later, I would learn that I had lashed out in the throes of the high, striking out at strangers, shoving past
+				others. No one had died, but the damage to trust was done.</p>
+
+			<p>By evening, the neighborhood had gathered in the commons. No one shouted, but there was no mistaking the
+				tension in the air — a taut thread holding the group together just long enough to decide what to do. Neighbors
+				spoke in low, deliberate voices, weighing what had happened against the years they had known me. Some asked
+				whether the Ghost would even allow me to stay after such a breach. Others wondered aloud if the city's response
+				to me might change if I showed discipline somewhere beyond its walls.</p>
+
+			<p>My parents sat together near the center, listening as much as speaking. My father's voice was calm, but it
+				carried. He said that harm had been done, even if it wasn't my intention, and that repairing it meant more than
+				fixing walls or making apologies. My mother added that an Enclave could be a place to relearn trust — not just
+				the community's trust in me, but my own trust in myself.</p>
+
+			<p>The idea settled into the space between us all, quiet but steady, until even those most resistant nodded their
+				agreement. By the time the gathering dispersed, it was no longer a suggestion but a course set: I would go to
+				Dawnreef, a coastal Enclave far from the Ghost's familiar reach, and live there until it was clear to everyone —
+				including myself — that I could return.</p>
+
+			<p>The next morning, the Ghost's light along my path out of the city was pale and cool, a neutral farewell.</p>
+			<h2 id="chapter-4">Chapter 4 — Dawnreef</h2>
+			<p>Dawnreef rose from the ocean like a cluster of living coral, its walls slick with salt and sun, its colors
+				shifting with the tide. The Enclave had been grown from a smaller Songseed, coaxed into its present form by
+				hands and voices far from the reach of the Ghost. Without the familiar bioluminescent haze, the air felt thinner
+				somehow, as if I'd stepped out of a shared dream into the raw glare of waking life. My quipu's threads dulled to
+				a pale, uncertain tone the moment I arrived, and I felt the change like a hollow in my chest.</p>
+
+			<p>The people here were warm enough, but there was no undercurrent of recognition, none of the subtle
+				acknowledgments the Ghost provided at home. I was just another newcomer passing through. My parents' reasoning —
+				that an Enclave might help me relearn trust — felt more like an exile than a cure. Still, the city's walls
+				pulsed faintly with energy, the scent of salt and resin in the air, and I tried to imagine this was temporary, a
+				chapter I could close.</p>
+
+			<p>It was the sound that drew me first — not the hum of roots or the whisper of leaves, but the sharp, percussive
+				roar of a crowd. I followed it to the edge of the lower terraces, where a track arched out over the water in a
+				series of looping curves and glassy straights. Air Skates hissed and growled along the course, riders leaning
+				into impossible angles, their wake pluming in sheets of mist. But the flourishes I expected — spins, arcs,
+				feather-light reversals — were replaced by collisions. Body met body in deliberate, bone-rattling impact. The
+				crowd didn't cheer for elegance; they roared for takedowns.</p>
+
+			<p>That night I found the sign-up lists. The next race was in two days. My name went down without hesitation,
+				though I felt the absence of the Ghost like a missing limb. Here, there would be no subtle encouragement, no
+				shimmer of approval in my peripheral vision. Only the track, the skates, and whoever was willing to drive me
+				into the rails.</p>
+
+			<p>When the race began, I tried to give them what I knew — the lines of efficiency, the brief, balanced arcs that
+				had pleased the crowds of Humania. The first time I rolled into a flourish, a shadow slid in at my flank and
+				sent me sprawling with a single, well-placed shoulder. The course skin burned through my gloves. I was back on
+				my feet in seconds, but the message was clear: in Dawnreef, beauty was wasted. The points were for contact.</p>
+
+			<p>The rest of the race became a study in avoidance. I skirted wide when packs formed, choosing clear air over
+				combat, letting others expend themselves in collisions. Position by position, I rose through the field, not with
+				speed but with survival. By the final lap I was in second, the leader a few lengths ahead, his posture loose and
+				sure, like someone who knew the track belonged to him.</p>
+
+			<p>I drafted behind him down the last straight, every muscle coiled for the final burst. The finish was a ribbon
+				of light across the glassy span. Then — impossibly — he turned. One smooth pivot, skating backward, gaze locked
+				on mine. His leading foot rose and drove into my chest in a standing kick that stole every scrap of speed I'd
+				built. The air left my lungs in a single, shocked sound, and the track met me hard.</p>
+
+			<p>By the time I pushed myself upright, the race was over. The leader was gone in a storm of cheers. My quipu had
+				gone nearly colorless, a tangle of pale strands. I sat there long enough for the officials to wave me off the
+				course, the salt air stinging my lungs.</p>
+
+			<p>That night, I lay awake in my narrow berth, listening to the Enclave's walls shift and settle with the tide.
+				Outside Astrothos, there were no unspoken agreements about fairness, no invisible net to catch you when you lost
+				balance. Here, the world rewarded force, and those who didn't give it had to find another way to survive.</p>
+
+			<h2 id="chapter-5">Chapter 5 — The Heel</h2>
+			<p>Losing in Dawnreef had left a bruise I couldn't see, but I felt it every time I put my skates on. At home, a
+				loss still came wrapped in the Ghost's quiet reassurance — that pale shimmer along the edges of your vision that
+				told you the city had noticed, had weighed your effort and found it worthy. Here, the air was empty. The walls
+				gave nothing back. The only measure of my worth came from the scoreboard, and the scoreboard had no patience for
+				artistry.</p>
+
+			<p>I told myself I'd adapt. The crowd's approval here was a different creature — raw, loud, and unashamed of its
+				appetites. They didn't care about grace. They wanted impact. They wanted the sound of two bodies colliding at
+				full speed. And if I wanted that feeling again, the one the Ghost used to give me without effort, I'd have to
+				give them what they came for.</p>
+
+			<p>I started small: holding my line instead of yielding, letting a shoulder brush turn into a shove, clipping
+				another racer's trajectory just enough to send them wide. It felt wrong at first — like I was vandalizing
+				something I'd spent years building — but each time the crowd roared, the hollow in my chest filled a little
+				more. Week after week, I learned when to hit, when to vanish, when to bide my time and let others destroy
+				themselves. Slowly, the podium came into reach.</p>
+
+			<p>By the end of my second season in Dawnreef, I was winning often enough to stop living in the Enclave's
+				dormitories. I moved into a rented loft above the dry-docks, where the smell of brine and machine oil drifted
+				through the windows. It was nothing like the breathing walls of Astrothos, but it was mine.</p>
+
+			<p>The offer came not long after. A representative from one of the circuit's sponsors — a company whose logo
+				seemed to be everywhere except on the winners' podium — pulled me aside after a race. Their proposal was simple:
+				I'd become the heel. The racer the crowd loved to hate. I would lean into my outsider status, wear my Astrothoan
+				colors and patterns, and skate with the cold precision they already found suspicious. I would win just enough to
+				keep them angry, lose just enough to keep them coming back. The pay was more than I'd ever seen.</p>
+
+			<p>I said yes.</p>
+
+			<p>The transformation was easy. My skates stayed tuned to the same unforgiving precision I'd learned in the root
+				workshops. I wore quipu-styled armbands over my sleeves, deep blue against the rusted steel aesthetic of the
+				diesel-punk locals. While others in the paddock smeared oil across their gear for effect, I kept mine polished
+				and bright, letting the contrast do the talking. The crowd's jeers became part of the show, their boos as
+				addictive as applause.</p>
+
+			<p>And I won. More than before, more than I'd dared hope. Each victory felt like a reclamation, a way to prove
+				that Astrothos hadn't sent me here to vanish into the tide.</p>
+
+			<p>Then came the out-of-towner. I don't remember hearing his name over the noise, but I knew he wasn't from
+				Dawnreef. His skates were heavy and loud, built for impact, his posture that of someone who'd never finished a
+				race without breaking something. From the first lap, he came for me — hitting early, hitting hard, testing every
+				inch of my balance.</p>
+
+			<p>For most of the race, I was holding him off by instinct alone. The aggression I'd cultivated these past months
+				became my only shield. I countered his strikes, cut him off in corners, forced him into the rails when the
+				angles allowed. On the final lap, we were neck-and-neck, the finish a blur of light ahead. He lunged for my
+				flank. I answered with a shoulder-to-shoulder hit so clean it rattled my teeth, buying just enough space to
+				cross the line a fraction ahead.</p>
+
+			<p>The crowd's noise broke like a wave. My quipu flared bright for the first time since I'd left home.</p>
+
+			<p>When I looked back, he was standing still on the track, helmet in hand, his face carved into something between
+				rage and promise. His mouth formed words I couldn't hear, but I knew their shape: <em>not done</em>.</p>
+
+			<p>I walked away riding the high of victory, the air electric in my lungs. But under it all was a weight I
+				couldn't shake — the sense that I'd just crossed into a different kind of race, one where the stakes would be
+				set by someone else.</p>
+
+			<h2 id="chapter-6">Chapter 6 — The Night Without the Ghost</h2>
+			<p>The night the Enclave burned began without warning. I woke to the sound of nothing — no wind, no distant hum of
+				generators — just the brittle silence of walls holding their breath. Out past the dry-docks, an orange bloom
+				unfurled against the darkness, then split into smaller, sharper bursts. The sound followed late, a deep
+				concussion that made the glass in my loft tremble.</p>
+
+			<p>By the time I reached the balcony, the horizon had become a jagged silhouette of black smoke and embers. The
+				air smelled of salt and burning resin. Sirens, crude and mechanical, tore through the streets. The Enclave was
+				on fire.</p>
+
+			<p>I moved without thought, skates in hand, cutting through the narrow, uneven corridors that led toward the
+				Songseed's heart. The closer I came, the more the streets filled with people: some carrying buckets, some
+				dragging injured neighbors, all moving in the direction opposite mine. The smoke thinned only when the walls
+				gave way to the open plaza where the Enclave's central structures once stood.</p>
+
+			<p>The plaza was unrecognizable. Sections of the living architecture had gone black and brittle, their colors
+				drained to ashen gray. The smell of burned bio-flesh turned my stomach. In the middle of it all, the emissaries
+				moved with grim precision, guiding survivors to the edges, speaking to those who could barely stand. One of
+				them, a woman I'd spoken to only twice before, caught sight of me and paused.</p>
+
+			<p>Her eyes held me still before her words did. Three dead. The out-of-towner from the race had vanished before
+				dawn. One of the dead was Jens.</p>
+
+			<p>For a moment I thought I'd misheard her — the name didn't belong here. She told me he'd been in Dawnreef only a
+				few weeks, sent — or perhaps sending himself — to help me return home. He'd been watching me race. Waiting for
+				the right time to speak. I hadn't known. I hadn't even seen him. And now I never would.</p>
+
+			<p>I stood there long after she moved on, staring at the charred ruin as if some detail might change the truth.
+				The Ghost was not here to wrap the edges of my grief in light. Only the sharp air of the coast and the slow
+				settling of ash marked the moment.</p>
+
+			<p>When the Exhalia began, I joined without hesitation. The survivors formed a circle around the reclamation site,
+				our voices taking shifts to carry the echo forward without pause. We sang in Esperantese, not for the crowd or
+				for each other, but for the city, for Jens, for the three who would now be part of its breath. Hours blurred
+				into days. My voice cracked, healed, and cracked again, but I did not leave.</p>
+
+			<p>Somewhere in that unbroken thread of sound, the Enclave began to answer. It was not the Ghost's luminous
+				tether, but something deeper — a pulse that moved below thought. My own voice seemed to braid with it, until the
+				vibration settled into my bones and memory opened like a door.</p>
+
+			<p>I was no longer in Dawnreef. I was small again, crouched in the hidden tunnels of Astrothos after the
+				Annihilation, listening to the city breathe while loss hollowed the air. I felt the same ache I had as a child
+				when I first learned that people could be here one moment and gone the next, that the city could take them in
+				but not give them back.</p>
+
+			<p>And in that resonance, I recognized something I had never let myself name: the truth that Jens had been part of
+				my home, long before he tried to bring me back to it. That I had carried his presence like the sound of the
+				city's roots — always there, even when I wasn't listening.</p>
+
+			<p>When the Exhalia ended, I left without speaking to anyone, the night air pressing cool against my skin. My loft
+				was exactly as I had left it, but it no longer felt like a place to return to.</p>
+
+			<h2 id="chapter-7">Chapter 7 — The Leaving That Wasn't</h2>
+			<p>The next race came and went without me. I heard the roar of the crowd from my loft — the same cadence that had
+				once pulled me to the track like a tide — but I stayed seated, staring at the tools on my workbench without
+				moving my hands. Part of me wanted to believe I was above it now, that the loss of Jens and the bombing had
+				shifted my priorities beyond points and podiums. Another part suspected I simply couldn't bear to race as if
+				nothing had happened.</p>
+
+			<p>For days, I drifted. The salt air that once felt sharp and alive now carried only a faint taste of ash. I
+				stopped tuning my skates, stopped watching the circuit's feeds. But the out-of-towner stayed in my thoughts, his
+				sneer on the track now fixed to the image of the Enclave's blackened shell. I told myself the only way forward
+				was to face him.</p>
+
+			<p>Finding him wasn't difficult. He had the kind of presence that left ripples in every backroom and dockside bar
+				in Dawnreef — always a drink half-finished, always someone eager to say they'd seen him. When I finally found
+				him, leaning against a rust-streaked railing that overlooked the breaker line, he didn't even look surprised.
+			</p>
+
+			<p>I didn't tell him what he'd taken from me. I didn't ask why. I simply handed him everything I had earned since
+				arriving in Dawnreef — the winnings, the sponsor payments, the quiet hoard I'd built in my rented loft. Enough
+				to disappear with. Enough to make leaving easy. I asked him to stay away from Dawnreef.</p>
+
+			<p>He laughed. A slow, dry sound, like someone testing the edge of a blade. He agreed without hesitation, as if
+				the exchange were a game he'd already won. Then he turned his back to me and let the ocean wind carry him
+				somewhere else.</p>
+
+			<p>I walked away with no proof I'd bought anything but his amusement.</p>
+
+			<p>The next weeks blurred into work. The Enclave's walls could be coaxed to heal with care, but without the full
+				neural network of Astrothos behind them, the process was slow. I worked alongside emissaries and locals, shaping
+				living supports, tending to regrowth, hauling away what couldn't be saved. It was the kind of labor that had no
+				scoreboard, no spectators, only the satisfaction of seeing something once broken begin to stand again.</p>
+
+			<p>Months passed. The plaza stopped smelling of ash. The living structures began to pulse with new color, pale at
+				first, then deeper. When the Enclave could stand on its own, I stayed. The idea of returning to my loft and the
+				circuit felt as hollow as the empty husk of a burned wall.</p>
+
+			<p>Instead, I began teaching. Not the Dawnreef style of racing — all elbows and calculated damage — but the lines
+				and flourishes I'd learned in Astrothos. I showed the few who were curious how to listen to their skates, how to
+				tune them until they matched the rhythm of their stride, how to let movement be more than the shortest path to
+				victory. It wasn't popular, but the ones who stayed came back for the same reason I did: to remember there was
+				another way.</p>
+
+			<p>In the evenings, when the tide ran low and the air was calm, I would skate the outer track alone. No crowd, no
+				points. Just the sound of the wind over the water and the faint memory of a city's breath I still hoped to hear
+				again.</p>
+
+			<h2 id="chapter-8">Chapter 8 — The Road Back</h2>
+			<p>It came to me one morning without ceremony — not as a flash of clarity, but as the quiet, persistent thought
+				that I had done enough here. Dawnreef stood again. The plazas no longer bore the smell of ash, the new growth
+				carried the steady pulse of a place that could heal itself, and the apprentices I'd taken on no longer needed my
+				hands to steady theirs. What they did need, I realized, was to take what I had taught them and make it their
+				own.</p>
+
+			<p>The decision to leave was less like a door swinging open and more like the tide withdrawing. I felt it pull at
+				me in every empty lap I skated along the outer track, the air cushions whispering over the course's skin, in the
+				way the horizon never changed no matter how fast I moved.</p>
+
+			<p>On the slow walk back to my quarters, I let the thought stretch out, examining it from every angle. I had come
+				to Dawnreef in exile — not chosen, not prepared, convinced that distance from Astrothos meant distance from
+				myself. I had spent my first months here chasing approval in the only form the place offered: points, podiums,
+				the roar of strangers. Then came the race that turned a rival into an enemy, and the night that stripped away
+				the illusions I had been clinging to.</p>
+
+			<p>Jens's death had broken something in me, but in its fracture, I had found edges I didn't know I had — the parts
+				of myself that could choose to stay when no one expected it, to work without reward, to teach without measuring
+				who listened. I had learned that an Enclave was more than an outpost of Astrothos; it was a mirror, showing what
+				the city's values looked like when they had to survive without the Ghost's constant presence.</p>
+
+			<p>Before leaving, I went to the plaza where Jens's obelisk stood. It rose pale against the rebuilt walls, its
+				surface breathing with slow pulses of light, every shimmer a pattern only the city understood. His mind was now
+				part of Dawnreef — not lost, but woven into its pulse, like a hidden chord in a song that would play long after
+				those who knew him were gone. I thought of the Ghost's reach back home, how it could carry the sense of a person
+				through space like a held breath. Here, there was no Ghost. If I wanted to feel Jens, I had to come to this
+				place, stand in its air, and let the city's echo find me. The knowledge was both an ache and a comfort: Jens
+				belonged to Dawnreef now, and Dawnreef would carry him forward in ways I could not.</p>
+
+			<p>The road back to Astrothos would not be the same as the one I had taken out. There would be no crowd at the
+				gates, no ceremony. I didn't expect the Ghost to meet me with any special light. The city might not even notice
+				I'd been gone. But I would notice. I would carry Dawnreef in the way my skates felt under my feet, in the weight
+				of my own restraint, in the absence of shame where it once had lived.</p>
+
+			<p>When I finally saw Astrothos again, the walls breathing in their familiar gradients of gold and green, the
+				Ghost drifted at street level in a pale morning haze. Its light curled gently at my ankles, as if leading me
+				home, but without urgency. I walked instead of skating, letting the city's pulse match my own.</p>
+
+			<p>My quipu still flickered in restless colors, never holding a single tone for long. I didn't hide it this time.
+				In the erratic light, I would sometimes glimpse a deep, steady blue — so brief I might have imagined it, so
+				certain it didn't matter. It was Jens's color, and it was enough. A reminder of the long road the Ghost had led
+				me down, through noise and exile, until I could breathe in open air again.</p>
+		</main>
+
+		<footer class="footer">
+			<p>From the Chronicles of Astrothos</p>
+			<p>A living city, breathing stories into the endless dunes</p>
+		</footer>
+	</div>
+</body>
+
+</html>
