@@ -8,224 +8,10 @@
 	<meta name="description" content="A story of exile, growth, and redemption set in the living city of Astrothos.">
 	<meta name="author" content="From the Astrothos Chronicles">
 
-	<style>
-		/* CSS Reset and Base Styles */
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		/* Dark Mode Color Palette */
-		:root {
-			--bg-primary: #0d1117;
-			--bg-secondary: #161b22;
-			--bg-tertiary: #21262d;
-			--text-primary: #f0f6fc;
-			--text-secondary: #7d8590;
-			--text-accent: #58a6ff;
-			--border-color: #30363d;
-			--highlight-bg: #1c2128;
-			--chapter-accent: #ffa657;
-			--link-color: #79c0ff;
-			--link-hover: #a5a5ff;
-		}
-
-		/* Typography */
-		body {
-			font-family: 'Georgia', 'Times New Roman', serif;
-			line-height: 1.7;
-			color: var(--text-primary);
-			background-color: var(--bg-primary);
-			font-size: 18px;
-			margin: 0;
-			padding: 0;
-		}
-
-		/* Container */
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 40px 20px;
-			min-height: 100vh;
-		}
-
-		/* Header */
-		.header {
-			text-align: center;
-			margin-bottom: 60px;
-			padding-bottom: 30px;
-			border-bottom: 2px solid var(--border-color);
-		}
-
-		.title {
-			font-size: 3.5rem;
-			font-weight: bold;
-			color: var(--text-accent);
-			margin-bottom: 15px;
-			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-			letter-spacing: -0.02em;
-		}
-
-		.subtitle {
-			font-size: 1.3rem;
-			color: var(--text-secondary);
-			font-style: italic;
-			margin-bottom: 30px;
-		}
-
-		/* Table of Contents */
-		.toc {
-			background: var(--bg-secondary);
-			border: 1px solid var(--border-color);
-			border-radius: 8px;
-			padding: 25px;
-			margin-bottom: 50px;
-		}
-
-		.toc h3 {
-			color: var(--chapter-accent);
-			margin-bottom: 15px;
-			font-size: 1.2rem;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
-		}
-
-		.toc ul {
-			list-style: none;
-		}
-
-		.toc li {
-			margin-bottom: 8px;
-		}
-
-		.toc a {
-			color: var(--link-color);
-			text-decoration: none;
-			transition: color 0.3s ease;
-			padding: 5px 0;
-			display: block;
-		}
-
-		.toc a:hover {
-			color: var(--link-hover);
-			text-decoration: underline;
-		}
-
-		/* Main Content */
-		.content {
-			line-height: 1.8;
-		}
-
-		/* Chapter Headings */
-		h1 {
-			font-size: 2.8rem;
-			color: var(--text-accent);
-			margin: 60px 0 30px 0;
-			text-align: center;
-			font-weight: 600;
-			letter-spacing: -0.01em;
-		}
-
-		h2 {
-			font-size: 1.8rem;
-			color: var(--chapter-accent);
-			margin: 50px 0 25px 0;
-			padding: 15px 0;
-			border-bottom: 1px solid var(--border-color);
-			font-weight: 500;
-		}
-
-		h2::before {
-			content: "§ ";
-			color: var(--text-secondary);
-			font-weight: 300;
-		}
-
-		/* Paragraphs */
-		p {
-			margin-bottom: 24px;
-			text-align: justify;
-			hyphens: auto;
-		}
-
-		/* First paragraph of each chapter */
-		h2+p::first-letter {
-			float: left;
-			font-size: 4em;
-			line-height: 0.8;
-			margin: 0.1em 0.1em 0 0;
-			color: var(--chapter-accent);
-			font-weight: bold;
-		}
-
-		/* Emphasis and Quotes */
-		em {
-			color: var(--text-accent);
-			font-style: italic;
-		}
-
-		strong {
-			color: var(--chapter-accent);
-			font-weight: 600;
-		}
-
-		/* Foreign text styling */
-		.foreign {
-			font-style: italic;
-			color: var(--text-accent);
-		}
-
-		/* Footer */
-		.footer {
-			margin-top: 80px;
-			padding-top: 30px;
-			border-top: 1px solid var(--border-color);
-			text-align: center;
-			color: var(--text-secondary);
-			font-size: 0.9rem;
-		}
-
-		/* Responsive Design */
-		@media (max-width: 768px) {
-			.container {
-				padding: 20px 15px;
-			}
-
-			.title {
-				font-size: 2.5rem;
-			}
-
-			h1 {
-				font-size: 2.2rem;
-			}
-
-			h2 {
-				font-size: 1.5rem;
-			}
-
-			body {
-				font-size: 16px;
-			}
-
-			h2+p::first-letter {
-				font-size: 3em;
-			}
-		}
-
-		/* Print Styles */
-		@media print {
-			body {
-				background: white;
-				color: black;
-			}
-
-			.toc {
-				background: #f5f5f5;
-				border: 1px solid #ccc;
-			}
-		}
-	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../shared/base.css">
+	<link rel="stylesheet" href="reading.css">
 </head>
 
 <body>
@@ -293,21 +79,21 @@
 
 			<p>He was always happy to see me — genuinely happy — and, as far as I could tell, he was happy to see anyone.
 				Perfectly capturing this strange, infuriating stability was the band around his wrist: a bright, royal-blue
-				quipu. The fiber strands shimmered with a depth of hue that never faltered, each thread braided in the tight,
-				precise pattern only its maker would know. In our culture, you learn not to compare colors — quipus are too
+				khipu. The fiber strands shimmered with a depth of hue that never faltered, each thread braided in the tight,
+				precise pattern only its maker would know. In our culture, you learn not to compare colors — khipus are too
 				personal for that — but I couldn't help it. His was the calm note of a perfect echo. Mine… shifted restlessly, a
 				weather vane in a wind I didn't understand.</p>
 			<h2 id="chapter-2">Chapter 2 — The Color I Couldn't Hold</h2>
-			<p>My quipu was always a quiet weight on my wrist — not in grams, but in shame. Nobody ever said anything
-				outright, but Jens's quipu seemed cleaner, sharper, brighter than any I had ever seen. Mine never shone with
+			<p>My khipu was always a quiet weight on my wrist — not in grams, but in shame. Nobody ever said anything
+				outright, but Jens's khipu seemed cleaner, sharper, brighter than any I had ever seen. Mine never shone with
 				anything close to that kind of color. I'd taken to calling it a dud when no one was listening.</p>
 
 			<p>When I let that slip aloud, my family and a few friends would scold me, reminding me that the color didn't
-				matter — that each quipu was personal, a living thread bound to the person who made it. Still, I noticed
-				patterns in my own. My quipu seemed to shift through certain hues when I felt anxious or nervous; other tones
+				matter — that each khipu was personal, a living thread bound to the person who made it. Still, I noticed
+				patterns in my own. My khipu seemed to shift through certain hues when I felt anxious or nervous; other tones
 				appeared when pride bloomed; still others in moments of ease.</p>
 
-			<p>Jens's quipu, though, was always the same steady, royal blue. Every race I skated against him — no matter the
+			<p>Jens's khipu, though, was always the same steady, royal blue. Every race I skated against him — no matter the
 				stakes, no matter how badly I beat him — there it was, shining like a deep note that never wavered. It tormented
 				me, the way he could stay perfectly calm, even in the roar of the crowds during Humania, the Ghost curling
 				luminous around our ankles as we crossed the finish. And why did it have to be so bright? It was as if the city
@@ -315,7 +101,7 @@
 
 			<p>Over the years, I began weaving bracelets of my own — soft grass cords and dyed root fibers — to stack along my
 				wrist. It wasn't for style; it was to hide my shame, and the way I shrank beside him. He had the gift of
-				belonging everywhere, knowing everyone; I had Toby and Lehanna. They were older, steadier, their quipus more
+				belonging everywhere, knowing everyone; I had Toby and Lehanna. They were older, steadier, their khipus more
 				like mine — restless, uneven, rarely settling into one color for long.</p>
 
 			<p>Toby and Lehanna weren't racers. They had a knack for the living systems of the city: pruning the groves,
@@ -324,7 +110,7 @@
 				their laughter echoing through corridors that smelled of leaf and loam.</p>
 
 			<p>I should explain: Astrothos, the city I call home, lies deep in the Great Dunes. It's alive — grown from the
-				Songseed, fed by the suns, cooled by the Ghost's breath. Every child born here receives a quipu before they can
+				Songseed, fed by the suns, cooled by the Ghost's breath. Every child born here receives a khipu before they can
 				even speak, braided in the ceremony that marks them as part of the whole. Much of what we once knew about them
 				was lost in the Annihilation, but the Auditeurs — our scientists — still study them, hoping to understand every
 				flicker of color, every pulse of light.</p>
@@ -455,7 +241,7 @@
 			<p>Dawnreef rose from the ocean like a cluster of living coral, its walls slick with salt and sun, its colors
 				shifting with the tide. The Enclave had been grown from a smaller Songseed, coaxed into its present form by
 				hands and voices far from the reach of the Ghost. Without the familiar bioluminescent haze, the air felt thinner
-				somehow, as if I'd stepped out of a shared dream into the raw glare of waking life. My quipu's threads dulled to
+				somehow, as if I'd stepped out of a shared dream into the raw glare of waking life. My khipu's threads dulled to
 				a pale, uncertain tone the moment I arrived, and I felt the change like a hollow in my chest.</p>
 
 			<p>The people here were warm enough, but there was no undercurrent of recognition, none of the subtle
@@ -491,7 +277,7 @@
 				on mine. His leading foot rose and drove into my chest in a standing kick that stole every scrap of speed I'd
 				built. The air left my lungs in a single, shocked sound, and the track met me hard.</p>
 
-			<p>By the time I pushed myself upright, the race was over. The leader was gone in a storm of cheers. My quipu had
+			<p>By the time I pushed myself upright, the race was over. The leader was gone in a storm of cheers. My khipu had
 				gone nearly colorless, a tangle of pale strands. I sat there long enough for the officials to wave me off the
 				course, the salt air stinging my lungs.</p>
 
@@ -530,7 +316,7 @@
 			<p>I said yes.</p>
 
 			<p>The transformation was easy. My skates stayed tuned to the same unforgiving precision I'd learned in the root
-				workshops. I wore quipu-styled armbands over my sleeves, deep blue against the rusted steel aesthetic of the
+				workshops. I wore khipu-styled armbands over my sleeves, deep blue against the rusted steel aesthetic of the
 				diesel-punk locals. While others in the paddock smeared oil across their gear for effect, I kept mine polished
 				and bright, letting the contrast do the talking. The crowd's jeers became part of the show, their boos as
 				addictive as applause.</p>
@@ -549,7 +335,7 @@
 				flank. I answered with a shoulder-to-shoulder hit so clean it rattled my teeth, buying just enough space to
 				cross the line a fraction ahead.</p>
 
-			<p>The crowd's noise broke like a wave. My quipu flared bright for the first time since I'd left home.</p>
+			<p>The crowd's noise broke like a wave. My khipu flared bright for the first time since I'd left home.</p>
 
 			<p>When I looked back, he was standing still on the track, helmet in hand, his face carved into something between
 				rage and promise. His mouth formed words I couldn't hear, but I knew their shape: <em>not done</em>.</p>
@@ -695,7 +481,7 @@
 				Ghost drifted at street level in a pale morning haze. Its light curled gently at my ankles, as if leading me
 				home, but without urgency. I walked instead of skating, letting the city's pulse match my own.</p>
 
-			<p>My quipu still flickered in restless colors, never holding a single tone for long. I didn't hide it this time.
+			<p>My khipu still flickered in restless colors, never holding a single tone for long. I didn't hide it this time.
 				In the erratic light, I would sometimes glimpse a deep, steady blue — so brief I might have imagined it, so
 				certain it didn't matter. It was Jens's color, and it was enough. A reminder of the long road the Ghost had led
 				me down, through noise and exile, until I could breathe in open air again.</p>
